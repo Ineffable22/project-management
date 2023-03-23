@@ -465,7 +465,7 @@ BEGIN
 
     -- * Insert event * --
     call requests_events_insert
-        ( pbigid, NULL, pinttable_sta, pintcode_sta, pdtmdate_issue, pbiguser_id, NULL, pdtmcreate_at, pvchcreate_by, NULL, NULL);
+        ( pbigid, NULL, pinttable_sta, pintcode_sta, pdtmdate_issue, pbiguser_id, pvchreason, pdtmcreate_at, pvchcreate_by, NULL, NULL);
 
 
     -- -- * Roles * --

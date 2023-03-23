@@ -5,10 +5,12 @@ from os import getenv
 from flask import Flask, jsonify, make_response
 from flask_cors import CORS
 from routes import app_views
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
 app.register_blueprint(app_views)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": ["http://lowlevel.tech/*", "https://lowlevel.tech/*", "https://www.lowlevel.tech"]}}, secure=False)
 
 
 @app.teardown_appcontext
